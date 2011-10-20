@@ -79,7 +79,8 @@
 			return current + '/' + max;
 		},
 		overFormat: function(current, max) {
-			return "Too long!"
+			var over = current - max;
+			return "Too long by " + over + "!"
 		}
 	});
 	//-->

@@ -7,11 +7,16 @@
 </head>
 
 <body>
+	<h1>Countdown</h1>
+	<p>A jQuery plugin to count down the number of characters remaining for a text input.</p>
+	
+	<hr />
+	
 	<h2>Basic Mode</h2>
 	<form method="post" action="" id="basic">
 		<label for="name_basic">
 			Your name:
-			<input name="name_basic" id="name_basic" type="text" value="" maxlength="100" />
+			<input name="name_basic" id="name_basic" type="text" value="" maxlength="40" />
 		</label>
 	</form>
 	<script type="text/javascript">
@@ -19,6 +24,8 @@
 	$('#name_basic').countdown();
 	//-->
 	</script>
+
+	<hr />
 
 	<h2>Customizable Max Length</h2>
 	<form method="post" action="" id="max_option">
@@ -30,11 +37,13 @@
 	<script type="text/javascript">
 	<!--
 	$('#name_max_option').countdown({
-		max: 50
+		max: 20
 	});
 	//-->
 	</script>
 
+	<hr />
+	
 	<h2>Customizable Format</h2>
 	<form method="post" action="" id="format_option">
 		<label for="name_format_option">
@@ -45,13 +54,15 @@
 	<script type="text/javascript">
 	<!--
 	$('#name_format_option').countdown({
-		max: 50,
+		max: 20,
 		format: function(current, max) {
 			return current + '/' + max;
 		}
 	});
 	//-->
 	</script>
+	
+	<hr />
 	
 	<h2>Customizable Over-Format</h2>
 	<form method="post" action="" id="over_format_option">
@@ -63,7 +74,7 @@
 	<script type="text/javascript">
 	<!--
 	$('#name_over_format_option').countdown({
-		max: 50,
+		max: 20,
 		format: function(current, max) {
 			return current + '/' + max;
 		},

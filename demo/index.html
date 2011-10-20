@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript" src="../src/js/countdown.jquery.js"></script>
+<link type="text/css" rel="stylesheet" href="demo.css" media="screen" />
+</head>
+
+<body>
+	<h2>Basic Mode</h2>
+	<form method="post" action="" id="basic">
+		<label for="name_basic">
+			Your name:
+			<input name="name_basic" id="name_basic" type="text" value="" maxlength="100" />
+		</label>
+	</form>
+	<script type="text/javascript">
+	<!--
+	$('#name_basic').countdown();
+	//-->
+	</script>
+
+	<h2>Customizable Max Length</h2>
+	<form method="post" action="" id="max_option">
+		<label for="name_max_option">
+			Your name:
+			<input name="name_max_option" id="name_max_option" type="text" value="" />
+		</label>
+	</form>
+	<script type="text/javascript">
+	<!--
+	$('#name_max_option').countdown({
+		max: 50
+	});
+	//-->
+	</script>
+
+	<h2>Customizable Format</h2>
+	<form method="post" action="" id="format_option">
+		<label for="name_format_option">
+			Your name:
+			<input name="name_format_option" id="name_format_option" type="text" value="" />
+		</label>
+	</form>
+	<script type="text/javascript">
+	<!--
+	$('#name_format_option').countdown({
+		max: 50,
+		format: function(current, max) {
+			return current + '/' + max;
+		}
+	});
+	//-->
+	</script>
+	
+	<h2>Customizable Over-Format</h2>
+	<form method="post" action="" id="over_format_option">
+		<label for="name_over_format_option">
+			Your name:
+			<input name="name_over_format_option" id="name_over_format_option" type="text" value="" />
+		</label>
+	</form>
+	<script type="text/javascript">
+	<!--
+	$('#name_over_format_option').countdown({
+		max: 50,
+		format: function(current, max) {
+			return current + '/' + max;
+		},
+		overFormat: function(current, max) {
+			return "Too long!"
+		}
+	});
+	//-->
+	</script>
+</body>
+</html>

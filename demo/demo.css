@@ -1,0 +1,41 @@
+body{
+  font-size: 1.4em;
+  font-family: arial;
+  background: #eee;
+}
+
+form input{
+  border: 1px solid #aaa;
+  border-radius: 0.5em;
+  padding: 0.25em;
+  font-size: 1.0em;
+  background: #fff;
+  padding-right: 3em;
+}
+
+form input:focus{
+  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
+}
+
+form label{
+  position: relative;
+}
+
+form .countdown{
+  position: absolute;
+  right: 0.85em;
+  top: 0em;
+  text-align: right;
+  display: block;
+  font-size: 0.7em;
+  background: #afa;
+  border-radius: 0.5em;
+  padding: 0.2em 0.4em;
+  color: #090;
+  font-weight: bold;
+}
+
+form .countdown.max-exceeded{
+  background: #faa;
+  color: #700;
+}
